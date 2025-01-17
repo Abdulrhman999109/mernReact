@@ -1,7 +1,5 @@
-/* google font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
 
-/* layout */
 :root {
   --primary: #1aac83;
   --error: #e7195a;
@@ -26,13 +24,11 @@ header a {
   color: #333;
   text-decoration: none;
 }
-.pages{
+.pages {
   max-width: 1400px;
   padding: 20px;
   margin: 0 auto;
 }
-
-/* homepage */
 .home {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -44,7 +40,7 @@ header a {
   margin: 20px auto;
   padding: 20px;
   position: relative;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
 }
 .workout-details h4 {
   margin: 0 0 10px 0;
@@ -66,7 +62,8 @@ header a {
   border-radius: 50%;
   color: #333;
 }
-label, input {
+label,
+input {
   display: block;
 }
 input {
@@ -95,7 +92,38 @@ div.error {
   border-radius: 4px;
   margin: 20px 0;
 }
-
 input.error {
   border: 1px solid var(--error);
+}
+@media (max-width: 1024px) {
+  .home {
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+  }
+  header .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .home {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  header .container {
+    padding: 10px;
+  }
+  .pages {
+    padding: 10px;
+  }
+  .workout-details {
+    padding: 15px;
+    margin: 10px auto;
+  }
+  .workout-details h4 {
+    font-size: 1em;
+  }
+  .workout-details p {
+    font-size: 0.8em;
+  }
 }
